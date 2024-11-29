@@ -2,10 +2,9 @@ import streamlit as st
 from langchain_community.llms.ollama import Ollama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-import pandas as pd  # For data manipulation and analysis using DataFrames.
-import random  # For generating random numbers and making random selections.
-import streamlit.components.v1 as components  # For embedding custom HTML components
-import os  # For checking environment variables
+import random
+import streamlit.components.v1 as components
+import os
 
 # Configurations
 icons = {
@@ -71,60 +70,9 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
 
-st.sidebar.markdown(
-    """
-    <div style="font-weight: bold; font-size: 16px; text-align: center; color: #333;">
-        <span style="color: #28a745;">Developed by</span> 
-        <a href="http://www.linkedin.com/in/muhammad-rasoul-sahibzadah-b97a47218/" style="color: #0077b5; text-decoration: underline;">Muhammad Rasoul</a>. 
-        <span style="color: #ffcc00;">Like this?</span> 
-        <a href="mailto:rasoul.sahibbzadah@auaf.edu.af" style="color: #d14836; text-decoration: underline;">Hire me!</a>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Social Links
-linkedin = "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/linkedin.gif"
-instagram = "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/topmate.gif"
-email = "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/email.gif"
-newsletter = "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/newsletter.gif"
-share = "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/share.gif"
-
-st.sidebar.caption(
-    f"""
-        <div style='display: flex; align-items: center;'>
-            <a href='http://www.linkedin.com/in/muhammad-rasoul-sahibzadah-b97a47218/'><img src='{linkedin}' style='width: 35px; height: 35px; margin-right: 25px;'></a>
-            <a href='https://www.instagram.com/rasoulsahibzadah/profilecard/?igsh=MXJiM3BxM2RyZ2prdA=='><img src='{instagram}' style='width: 32px; height: 32px; margin-right: 25px;'></a>
-            <a href='mailto:rasoul.sahibbzadah@auaf.edu.af'><img src='{email}' style='width: 28px; height: 28px; margin-right: 25px;'></a>
-            <a href='https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7163516439096733696'><img src='{newsletter}' style='width: 28px; height: 28px; margin-right: 25px;'></a>
-            <a href='https://www.kaggle.com/mohammadrasoul'><img src='{share}' style='width: 28px; height: 28px; margin-right: 25px;'></a>
-        </div>
-        """,
-    unsafe_allow_html=True,
-)
-
-
-    # About Me Section with Expander
-with st.sidebar:
-    # Add padding to the top of the sidebar to push everything down
-    st.markdown("<div style='padding-top: 50px;'></div>", unsafe_allow_html=True)  # Adjust padding as necessary
-
-    with st.expander("About Me", expanded=False):
-        st.markdown(
-            """
-        <div style="font-size: 16px; color: white; margin-top: 10px;">
-            <p style="font-weight: bold;">
-                I am a passionate <span style="color: red;">Data Scientist</span> with a strong background in analyzing <span style="color: red;">data</span>, building <span style="color: red;">machine learning models</span>, and applying <span style="color: red;">data science techniques</span> to solve real-world problems. With expertise in <span style="color: red;">Python</span>, <span style="color: red;">machine learning algorithms</span>, and <span style="color: red;">data visualization</span>, I strive to extract meaningful insights and drive impactful decision-making. I also have experience in designing <span style="color: red;">websites</span>, <span style="color: red;">mobile apps</span>, and managing <span style="color: red;">databases</span>. I am eager to continue growing and improving my skills, while using my <span style="color: red;">technical know-how</span> to benefit both organizations and individuals.
-            </p>
-        </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
-
 # Display Chat Messages
 for message in st.session_state.messages:
-    with st.chat_message(message["role"], avatar=icons[message["role"]]):
+    with st.chat_message(message["role"], avatar=icons[message["role"]] ):
         st.write(message["content"])
 
 # User Input and Response Handling
@@ -145,8 +93,12 @@ if "has_snowed" not in st.session_state:
     st.session_state["has_snowed"] = True
 
 # Optional Particle Animation
-with open("particles.html", "r") as f:
-    particles_html = f.read()
+try:
+    with open("particles.html", "r") as f:
+        particles_html = f.read()
 
-if st.session_state.show_animation:
-    components.html(particles_html, height=370, scrolling=False)
+    if st.session_state.show_animation:
+        components.html(particles_html, height=370, scrolling=False)
+
+except FileNotFoundError:
+    st.warning("particles.html not found. Ensure the file is in the correct directory.")
