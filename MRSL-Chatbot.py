@@ -7,6 +7,36 @@ import random  # For generating random numbers and making random selections.
 import streamlit.components.v1 as components  # For embedding custom HTML components
 import os  # For checking environment variables
 
+
+st.markdown(
+    """
+    <style>
+        /* Dark Mode Styles */
+        .stApp {
+            background-color: #0E1117;  /* Dark background color */
+            color: white;  /* White text color */
+        }
+
+        .css-1d391kg {
+            background-color: #262730;  /* Dark Sidebar Background */
+        }
+
+        .stButton, .stTextInput, .stTextArea {
+            background-color: #262730;
+            color: white;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: white;
+        }
+
+        .stChatMessage {
+            background-color: #262730;  /* Dark background for chat bubbles */
+            color: white;  /* White text in chat bubbles */
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
 # Configurations
 icons = {
     "assistant": "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/assistant-done.svg",
