@@ -7,6 +7,8 @@ import random  # For generating random numbers and making random selections.
 import streamlit.components.v1 as components  # For embedding custom HTML components
 import os  # For checking environment variables
 
+# Set Page Configuration - Move this line to the top
+st.set_page_config(page_title="MRSL.Teck", page_icon="✨", layout="wide")
 
 st.markdown(
     """
@@ -43,8 +45,6 @@ icons = {
     "assistant": "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/assistant-done.svg",
     "user": "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/user-done.svg",
 }
-
-st.set_page_config(page_title="MRSL.Teck", page_icon="✨", layout="wide")
 
 welcome_messages = [
     "Hello! I'm MRSL, an AI assistant designed to make image metadata meaningful. Ask me anything!",
