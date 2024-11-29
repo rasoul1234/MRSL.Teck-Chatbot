@@ -37,11 +37,13 @@ st.markdown(
     </style>
     """, unsafe_allow_html=True
 )
+
 # Configurations
 icons = {
     "assistant": "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/assistant-done.svg",
     "user": "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/user-done.svg",
 }
+
 st.set_page_config(page_title="MRSL.Teck", page_icon="✨", layout="wide")
 
 welcome_messages = [
@@ -81,7 +83,7 @@ def generate_response(question):
         return f"Error: {e}"
 
 # Check if Ngrok URL should be used
-ngrok_url = "http://<ngrok-subdomain>.ngrok.io"  # Replace with actual Ngrok URL after running Ngrok
+ngrok_url = ""https://2876-103-42-2-135.ngrok-free.app""  # Replace with actual Ngrok URL after running Ngrok
 local_url = "http://localhost:8080"
 
 # Environment variable check: Set USE_NGROK to "true" when using Ngrok
@@ -133,8 +135,7 @@ st.sidebar.caption(
     unsafe_allow_html=True,
 )
 
-
-    # About Me Section with Expander
+# About Me Section with Expander
 with st.sidebar:
     # Add padding to the top of the sidebar to push everything down
     st.markdown("<div style='padding-top: 50px;'></div>", unsafe_allow_html=True)  # Adjust padding as necessary
