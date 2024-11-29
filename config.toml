@@ -1,11 +1,2 @@
 [theme]
 base = "dark"
-
-
-[server]
-headless = true
-port = 8501
-enableCORS = false  # Disable CORS if your app is running on a local server or behind a proxy
-
-[logger]
-level = "info"  # Set the logging level to show info, warning, or error logs
