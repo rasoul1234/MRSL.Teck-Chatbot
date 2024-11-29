@@ -15,9 +15,11 @@ icons = {
 st.set_page_config(page_title="MRSL.Teck", page_icon="✨", layout="wide")
 
 welcome_messages = [
-    "Hello! I'm MRSL, an AI assistant designed to make image metadata meaningful. Ask me anything!",
-    "Hi! I'm MRSL, an AI-powered assistant for extracting and explaining EXIF data. How can I help you today?",
-    "Hey! I'm MRSL, your AI-powered guide to understanding the metadata in your images. What would you like to explore?",
+"Hello! I'm MRSL, your AI assistant. How can I help you today?",
+"Hi there! I’m MRSL, an AI-powered assistant here to assist you. What can I do for you?",
+"Hey! I'm MRSL, your AI chatbot. Feel free to ask me anything!",
+"Greetings! I’m MRSL, your friendly AI assistant. How can I assist you today?",
+"Welcome! I'm MRSL, your AI helper. Let me know how I can assist you!",
 ]
 message = random.choice(welcome_messages)
 
