@@ -83,7 +83,7 @@ def generate_response(question):
         return f"Error: {e}"
 
 # Check if Ngrok URL should be used
-ngrok_url = ""https://2876-103-42-2-135.ngrok-free.app""  # Replace with actual Ngrok URL after running Ngrok
+ngrok_url = "https://2876-103-42-2-135.ngrok-free.app"  # Replace with actual Ngrok URL after running Ngrok
 local_url = "http://localhost:8080"
 
 # Environment variable check: Set USE_NGROK to "true" when using Ngrok
