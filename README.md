@@ -1,7 +1,3 @@
-Here's the updated README file with **MRSL** instead of **MRS**:
-
----
-
 # MRSL.Tech
 
 MRSL.Tech is an AI-powered tool designed to help users interact with and extract meaningful metadata from images. This project uses Streamlit for building interactive web applications and integrates **Ollama** for natural language processing to assist with queries. Whether you're exploring EXIF data or asking general questions, MRSL.Tech provides an intelligent assistant to make your experience easy and interactive.
@@ -119,6 +115,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - This project was developed as a tool to interact with image metadata in a fun and useful way, using the power of Streamlit and AI.
 
----
-
-This should now reflect your request for **MRSL** instead of **MRS**. Let me know if you need any further adjustments!
