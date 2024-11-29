@@ -62,7 +62,7 @@ print(f"Using service at: {url_to_use}")
 
 # Sidebar Content
 with st.sidebar:
-    image_url = "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/Rasoul.jpg"
+    image_url = "https://raw.githubusercontent.com/rasoul1234/MRSL.Teck-Chatbot/main/img/logo.png"
     st.markdown(
         f"""
         <div style='display: flex; align-items: center;'>
