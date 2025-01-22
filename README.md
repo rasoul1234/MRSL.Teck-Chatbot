@@ -1,6 +1,7 @@
 # MRSL.Tech
 
 MRSL.Tech is an AI-powered tool designed to help users interact with and extract meaningful metadata from images. This project uses Streamlit for building interactive web applications and integrates **Ollama** for natural language processing to assist with queries. Whether you're exploring EXIF data or asking general questions, MRSL.Tech provides an intelligent assistant to make your experience easy and interactive.
+Link for APP: https://mrslteck-chatbot-gbptkdbnys9ehuxsjdldxz.streamlit.app/
 
 ---
 
