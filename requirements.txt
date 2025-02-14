@@ -1,5 +1,7 @@
 streamlit
-langchain
-langchain_community
+langchain-core
+langchain-huggingface
+huggingface_hub
+python-dotenv
 pandas
-pyngrok
+random
